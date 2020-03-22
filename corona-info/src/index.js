@@ -8,12 +8,12 @@ import reducers from './Reducers/index';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware  } from 'redux';
 import ReduxSagaMiddleware from 'redux-saga';
-import { watchAgeUp } from './Actions/TestActions';
+import { rootSaga } from './Actions/CountriesDataAction';
 
 const sagaMiddleware = ReduxSagaMiddleware();
 
 const store = createStore(reducers,  applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(watchAgeUp);
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <Provider store={store}>

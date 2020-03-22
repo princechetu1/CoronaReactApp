@@ -4,32 +4,39 @@ import Header from '../Components/Header';
 import TitleValues from '../Components/HighLevelStatus';
 import DetailedComponent from '../Components/DetailedComponent';
 import Footer from '../Components/Footer'; 
+import { BrowserRouter as Router } from 'react-router-dom';
 
-class App extends Component {
+
+export default class App extends Component {
+   
     render() {
         return  (
-            <div>
-                <div className='row'>
-                    <div className='col'>
-                       <Header />
+            <Router>
+                    <div>
+                        <div className='row'>
+                            <div className='col'>
+                            <Header />
+                            </div>
+                        </div>
+                        <div className='row'>
+                            <div className='col-12'>
+                                <TitleValues />
+                            </div>
+                        </div>
+                        <div className='row'>
+                            <div className='col-12'>
+                                <DetailedComponent />
+                            </div>
+                        </div>
+                        <div className='row'>
+                            <Footer />
+                        </div>
                     </div>
-                </div>
-                <div className='row'>
-                    <div className='col-12'>
-                        <TitleValues />
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col-12'>
-                        <DetailedComponent />
-                    </div>
-                </div>
-                <div className='row'>
-                    <Footer />
-                </div>
-            </div>
+            </Router>
         );
     }
 }
 
-export default App;
+
+
+

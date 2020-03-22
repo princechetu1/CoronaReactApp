@@ -1,8 +1,8 @@
-import testValues from './testReducer';
 import { combineReducers } from 'redux';
+import countriesData from './CountriesData';
 
 const rootReducers = combineReducers({
-    testValues: testValues,
+    countries:countriesData
 });
 
 export default rootReducers;
