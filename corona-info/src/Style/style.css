@@ -1,0 +1,17 @@
+body {
+    background-color:azure;
+    padding: 1rem;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.headerStyle{
+    padding: 1rem;
+    border-bottom: solid 1px;
+}
+
+.headerStyle h2,
+.headerStyle h5 {
+    position: relative !important;
+    text-align: center !important;
+}

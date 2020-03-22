@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Style/style.css';
+import Header from '../Components/Header';
 
 class App extends Component {
     render() {
@@ -7,7 +8,7 @@ class App extends Component {
             <div>
                 <div className='row'>
                     <div className='col'>
-                       Header
+                       <Header />
                     </div>
                 </div>
                 <div className='row'>
