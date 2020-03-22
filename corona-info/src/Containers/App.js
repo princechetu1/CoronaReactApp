@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import '../Style/style.css';
 import Header from '../Components/Header';
+import TitleValues from '../Components/HighLevelStatus';
+import DetailedComponent from '../Components/DetailedComponent';
+import Footer from '../Components/Footer'; 
 
 class App extends Component {
     render() {
@@ -12,15 +15,17 @@ class App extends Component {
                     </div>
                 </div>
                 <div className='row'>
-                    <div className='col-2'>
-                        Menu
-                    </div>
-                    <div className='col-10'>
-                        Content
+                    <div className='col-12'>
+                        <TitleValues />
                     </div>
                 </div>
                 <div className='row'>
-                    Footer
+                    <div className='col-12'>
+                        <DetailedComponent />
+                    </div>
+                </div>
+                <div className='row'>
+                    <Footer />
                 </div>
             </div>
         );
