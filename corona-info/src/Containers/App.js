@@ -28,9 +28,6 @@ export default class App extends Component {
                                 <DetailedComponent />
                             </div>
                         </div>
-                        <div className='row'>
-                            <Footer />
-                        </div>
                     </div>
             </Router>
         );

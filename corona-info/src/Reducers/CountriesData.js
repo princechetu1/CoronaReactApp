@@ -1,7 +1,7 @@
 const initalState = {
     data : [],
     IndianData:{},
-    IndiaStateData:{}
+    IndiaStateData:[]
 };
 
 export default (state=initalState,action) => {

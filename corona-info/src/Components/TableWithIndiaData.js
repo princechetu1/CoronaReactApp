@@ -6,13 +6,31 @@ import { getInidaDataAsync } from  '../Actions/index';
 
 const Statecolumns = [
   {
-    name: 'Title',
-    selector: 'title',
+    name: 'State Name',
+    selector: 'State_Name',
     sortable: true,
   },
   {
-    name: 'Year',
-    selector: 'year',
+    name: 'Total Confirmed cases(Indian National)',
+    selector: 'Total_Confirmed_cases_Indian_National',
+    sortable: true,
+    right: true,
+  },
+  {
+    name: 'Total Confirmed cases(Foreign National)',
+    selector: 'Total_Confirmed_cases_Foreign_National',
+    sortable: true,
+    right: true,
+  },
+  {
+    name: 'Cured/Discharged/Migrated',
+    selector: 'Cured_Discharged_Migrated',
+    sortable: true,
+    right: true,
+  },
+  {
+    name: 'Death',
+    selector: 'Death',
     sortable: true,
     right: true,
   },
@@ -47,10 +65,11 @@ const customStyles = {
         return (
             <div>
                  <DataTable
-                 todayCases
+                 data={this.props.countriesData.IndiaStateData}
                     columns={Statecolumns}
                     title={'Indian State Details'}
                     pagination
+                    paginationPerPage="5"
                     customStyles={customStyles}
                 />
             </div>
