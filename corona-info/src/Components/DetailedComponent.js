@@ -29,7 +29,7 @@ export default class DetailedComponent extends Component {
                         </Link>
                     </li>     
                     <li className="list-group-item">
-                        <Link to='/pdflinks'> {'New PDF by Govt.'}  </Link>
+                        <Link to='/pdflinks'> {'Article PDF by Govt.'}  </Link>
                     </li>  
                         </ul>
                 </div>
