@@ -20,12 +20,12 @@ export default class App extends Component {
                         </div>
                         <div className='row'>
                             <div className='col-12'>
-                                <TitleValues />
+                                <DetailedComponent />
                             </div>
                         </div>
                         <div className='row'>
                             <div className='col-12'>
-                                <DetailedComponent />
+                                <Footer />
                             </div>
                         </div>
                     </div>

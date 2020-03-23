@@ -29,8 +29,7 @@ body {
 }
 
 .detailedStyle{
-    height: 22rem;
-    margin: 10px;
+    height: 30rem;
 }
 
 .footerStyle{
@@ -82,5 +81,7 @@ ul {
 
   .detailsBlock{
     overflow: scroll;
-    height: 20rem;
+    height: 25rem;
+    overflow-x: hidden;
+    height: 24rem;
   }
