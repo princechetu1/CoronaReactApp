@@ -69,7 +69,7 @@ const customStyles = {
                     columns={Statecolumns}
                     title={'Indian State Details'}
                     pagination
-                    paginationPerPage="5"
+                    paginationPerPage="7"
                     customStyles={customStyles}
                 />
             </div>
