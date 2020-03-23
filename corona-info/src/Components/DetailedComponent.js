@@ -14,7 +14,7 @@ export default class DetailedComponent extends Component {
         return (
             <div className='row detailedStyle'>
 
-<div className='col-12'>
+<div className='col-12 '>
                 <ul>
                 <li className="list-group-item">
                         <Link to='/graph'> {'OverView'}  </Link>
@@ -23,7 +23,7 @@ export default class DetailedComponent extends Component {
                         <Link to='/world'> {'World'}  </Link>
                     </li>
                                 
-                    <li className="list-group-item active">
+                    <li className="list-group-item">
                         <Link to='/India'>
                                 {'India'}
                         </Link>
@@ -33,7 +33,7 @@ export default class DetailedComponent extends Component {
                     </li>  
                         </ul>
                 </div>
-                <div className='col-12'>
+                <div className='col-12 detailsBlock'>
                     <TableContent />
                 </div>
                    

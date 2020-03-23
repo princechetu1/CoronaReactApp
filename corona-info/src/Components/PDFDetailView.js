@@ -11,10 +11,9 @@ class PDFDetailView extends Component {
 
     render() {
         return (
-            <div className='headerStyle'>
-                <h2>{'Corona Virus Details '}</h2>
+            <div>
                {this.props.PDFLinks.data.map((k) =>{
-                  return <div><a href={k.link}>{k.title}</a><br/></div>
+                  return <div><a target='_blank' href={k.link}>{k.title}</a><br/></div>
                })}
             </div>
         )
