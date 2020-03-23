@@ -11,7 +11,7 @@ class PDFDetailView extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{backgroundColor:'white'}}>
                {this.props.PDFLinks.data.map((k) =>{
                   return <div><a target='_blank' href={k.link}>{k.title}</a><br/></div>
                })}
