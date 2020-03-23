@@ -4,7 +4,7 @@ import React, {Component } from 'react';
 export default class Header extends Component {
     render() {
         return (
-            <div className='headerStyle'>
+            <div className='headerStyle shadow-lg p-3 mb-2 bg-white rounded'>
                 <h2>{'Corona Virus Details '}</h2>
                 <h5 className='row'>
                     <div className='col-6'>

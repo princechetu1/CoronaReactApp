@@ -33,7 +33,7 @@ export default class DetailedComponent extends Component {
                     </li>  
                         </ul>
                 </div>
-                <div className='col-12 detailsBlock'>
+                <div className='col-12 detailsBlock shadow p-3 mb-5 bg-white rounded'>
                     <TableContent />
                 </div>
                    
