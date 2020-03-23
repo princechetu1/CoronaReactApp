@@ -2,7 +2,7 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom';
 import TableContent from './TableContent';
-import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 
@@ -16,16 +16,21 @@ export default class DetailedComponent extends Component {
 
 <div className='col-12'>
                 <ul>
-                <Link to='/world'>
-                                    <li className="list-group-item">
-                                        {'World'}
-                                    </li>
-                                </Link>
-                                <Link to='/India'>
-                                    <li className="list-group-item">
-                                        {'India'}
-                                    </li>
-                                </Link>
+                <li className="list-group-item">
+                        <Link to='/graph'> {'OverView'}  </Link>
+                    </li>
+                    <li className="list-group-item">
+                        <Link to='/world'> {'World'}  </Link>
+                    </li>
+                                
+                    <li className="list-group-item active">
+                        <Link to='/India'>
+                                {'India'}
+                        </Link>
+                    </li>     
+                    <li className="list-group-item">
+                        <Link to='/pdflinks'> {'New PDF by Govt.'}  </Link>
+                    </li>  
                         </ul>
                 </div>
                 <div className='col-12'>

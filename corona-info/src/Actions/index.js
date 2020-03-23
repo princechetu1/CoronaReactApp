@@ -10,3 +10,7 @@ export const getInidaHighLevelAsync = () => ({
 export const getInidaDataAsync = () => ({
     type: 'GET_INDIA_DATA',
 });
+
+export const watchPDFAction = () => ({
+    type: 'GET_ALL_PDF',
+});
