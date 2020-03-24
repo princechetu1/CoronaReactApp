@@ -6,13 +6,7 @@ import Highcharts from "highcharts";
 import {getInidaDataAsync} from '../Actions/index';
 import highchartsMap from "highcharts/modules/map";
 import {getIndiaData} from "../Helpers/IndiaData";
-import proj4 from "proj4";
 highchartsMap(Highcharts);
-
-
-if (typeof window !== "undefined") {
-  window.proj4 = window.proj4 || proj4;
-}
 
 var data = [
         ['in-py', 0],

@@ -1,6 +1,48 @@
 
 import React, {Component } from 'react';
 import { connect } from 'react-redux';
+import HighchartsReact from "highcharts-react-official";
+import Highcharts from "highcharts";
+import mapJson from "@highcharts/map-collection/custom/world.geo.json";
+import highchartsMap from "highcharts/modules/map";
+import proj4 from "proj4";
+highchartsMap(Highcharts);
+
+const mapOptions = {
+    chart: {
+      map: mapJson
+    },
+    title: {
+      text: " "
+    },
+    mapNavigation: {
+      enabled: true,
+      buttonOptions:{
+          verticalAlign:'bottom'
+      }
+    },
+    tooltip: {
+        headerFormat: "",
+        pointFormat: "Cases {point.value.cases}, Deaths {point.value.deaths}"
+      },
+    series: [
+     {
+        name: "Locations",
+        color: "#4169E1",
+        data: [],
+        states: {
+          hover: {
+            color: 'red'
+          }
+        },
+        dataLabels:{
+            enabled:true, 
+            format:"{point.name}"
+        }
+      }
+    ]
+  };
+
 
 class ChartViewForWorldData extends Component {
     constructor(props){
@@ -30,16 +72,11 @@ class ChartViewForWorldData extends Component {
     render() {
         return (
             <div className='headerStyle shadow-lg p-3 mb-2 bg-white rounded'>
-                    {this.state.chartValues.map((k,v) => {
-                        return <div>
-                            <div class="card">
-                                <div class="card-header">{k.name}</div>
-                                <div class="card-body">{k.value}</div>
-                            </div>
-                        </div>
-
-                    })
-                    }
+                   <HighchartsReact
+                constructorType={"mapChart"}
+                highcharts={Highcharts}
+                options={mapOptions}
+            />
             </div>
         )
     }
