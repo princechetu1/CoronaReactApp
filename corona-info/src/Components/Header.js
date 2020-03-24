@@ -5,7 +5,7 @@ export default class Header extends Component {
     render() {
         return (
             <div className='headerStyle shadow-lg p-3 mb-2 bg-white rounded'>
-                <h2>{'Corona Virus Details '}</h2>
+                <h2>{'Corona Virus(COVID-19) Details '}</h2>
                 <h5 className='row'>
                     <div className='col-6'>
                         {'Helpline Number Toll free: 1075, +91-11-23978046'}

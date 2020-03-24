@@ -111,7 +111,7 @@ const customStyles = {
 
 const mapStateToProps = (state) => ({
   countriesData: state.countries,
-  })
+  });
 
 const mapDispatchToProps = {
   getInidaDataAsync: getInidaDataAsync
