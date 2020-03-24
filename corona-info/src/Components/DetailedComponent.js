@@ -16,30 +16,30 @@ class DetailedComponent extends Component {
         return (
             <div className='row detailedStyle'>
 
-<div className='col-12 '>
-                <ul>
-                <li className="list-group-item">
+                <div className='col-12 '>
+                <ul className='col-12'>
+                    <li className="col-2 list-group-item">
                         <Link to='/graph'> {'Overview'}  </Link>
                     </li>
-                    <li className="list-group-item">
+                    <li className="col-2 list-group-item">
                         <Link to='/world'> {'World'}  </Link>
                     </li>
                                 
-                    <li className="list-group-item">
+                    <li className="col-2 list-group-item">
                         <Link to='/India'>
                                 {'India'}
                         </Link>
                     </li>     
-                    <li className="list-group-item">
+                    <li className="col-2 list-group-item">
                         <Link to='/pdflinks'> {'Latest Article by Govt.'}  </Link>
                     </li>  
-                    <li className="list-group-item">
+                    <li className="col-1 list-group-item">
                     <b>{'Total Cases : '}</b>
                     <b style={{color:'Orange'}}>{this.props.countriesData.Total.TotalCases}</b>  
                     <p><b>{this.props.countriesData.Total.Name}</b></p>
                     </li>  
                     
-                    <li className="list-group-item">
+                    <li className="col-1 list-group-item">
                         <b>{'Total Cured : '}</b>
                          <b style={{color:'Green'}}>{this.props.countriesData.Total.TotalCured}</b>  
                             <p><b>{this.props.countriesData.Total.Name}</b></p>
