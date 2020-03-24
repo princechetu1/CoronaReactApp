@@ -4,6 +4,7 @@ const initalState = {
     IndiaStateData:[]
 };
 
+
 export default (state=initalState,action) => {
     const newState = {...state};
     switch(action.type){
