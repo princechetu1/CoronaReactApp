@@ -11,19 +11,6 @@ import {getCountriesDataAsync } from '../Actions/index';
 class DetailedComponent extends Component {
   constructor(props){
       super(props);
-      this.state = {
-          Total : {
-            "TotalCases":0,
-            "TotalCured" :0,
-            "TotalDeath":0
-          }
-      };
-  }
-
-  componentWillMount(){
-      if(this.props.countriesData.data.length > 0){
-        this.setState({ Total : this.props.countriesData.Total});
-      }
   }
      render() {
         return (
@@ -32,7 +19,7 @@ class DetailedComponent extends Component {
 <div className='col-12 '>
                 <ul>
                 <li className="list-group-item">
-                        <Link to='/graph'> {'OverView'}  </Link>
+                        <Link to='/graph'> {'Overview'}  </Link>
                     </li>
                     <li className="list-group-item">
                         <Link to='/world'> {'World'}  </Link>

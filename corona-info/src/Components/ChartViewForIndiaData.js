@@ -49,7 +49,7 @@ const mapOptions = {
           map: getIndiaData()
         },
         title: {
-          text: " "
+          text: " India Details"
         },
         mapNavigation: {
           enabled: true,
@@ -91,7 +91,7 @@ class ChartViewForIndiaData extends Component {
     }
     render() {
         return (
-            <div className='headerStyle shadow-lg p-3 mb-2 bg-white rounded'>
+            <div style={{overflow:'scroll'}} className='headerStyle shadow-lg p-3 mb-2 bg-white rounded'>
              <HighchartsReact
                 constructorType={"mapChart"}
                 highcharts={Highcharts}
