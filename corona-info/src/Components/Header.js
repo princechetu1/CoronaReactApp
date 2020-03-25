@@ -22,7 +22,7 @@ export default class Header extends Component {
     
     render() {
         let menuBar = <ul className="sidenav" ref={this.mySidenav}>
-                    <li onClick={this.closeNav}  className="closebtn">X</li>
+                    <li onClick={this.closeNav}  className="closebtn">x</li>
                     <li className="col-12">
                         <Link to='/graph'> {'Overview'}  </Link>
                     </li>
