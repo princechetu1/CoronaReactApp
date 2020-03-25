@@ -8,10 +8,10 @@ export default class Header extends Component {
                 <h2>{'Corona Virus(COVID-19) Details '}</h2>
                 <h5 className='row'>
                     <div className='col-6'>
-                        {'Helpline Number Toll free: 1075, +91-11-23978046'}
+                        <b>{'Helpline Number Toll free: 1075, +91-11-23978046'}</b>
                     </div>
                     <div className='col-6' style={{textAlign:'end'}}>
-                        {'Helpline Email ID :  ncov2019.gov.in OR ncov2019.gmail.com'}
+                        <b>{'Helpline Email ID :  ncov2019.gov.in OR ncov2019.gmail.com'}</b>
                     </div>
                 </h5>
             </div>

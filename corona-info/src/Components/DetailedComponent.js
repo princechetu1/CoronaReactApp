@@ -11,47 +11,100 @@ import {getCountriesDataAsync } from '../Actions/index';
 class DetailedComponent extends Component {
   constructor(props){
       super(props);
+      this.state ={
+          isMobiledevice:(window.outerWidth < 450) ? true :false
+      };
+      this.mySidenav = React.createRef();
+      this.openNav = this.openNav.bind(this);
+      this.closeNav = this.closeNav.bind(this);
+  }
+
+
+  closeNav(){
+    debugger;
+  }
+
+  openNav(){
+    debugger;
   }
      render() {
-        return (
-            <div className='row detailedStyle'>
-
-                <div className='col-12 '>
-                <ul className='col-12'>
-                    <li className="col-2 list-group-item">
+         let menuBar;
+         if(this.state.isMobiledevice){
+            menuBar = <ul className='col-12 shadow justify-content-center'>
+                <ul className="sidenav" style={{visibility:'visible',display:'block'}} >
+                    <li onClick={this.closeNav}>X</li>
+                    <li className="col-12 menusItem">
                         <Link to='/graph'> {'Overview'}  </Link>
                     </li>
-                    <li className="col-2 list-group-item">
+                    <li className="col-12 menusItem">
                         <Link to='/world'> {'World'}  </Link>
                     </li>
                                 
-                    <li className="col-2 list-group-item">
+                    <li className="col-12 menusItem">
                         <Link to='/India'>
                                 {'India'}
                         </Link>
                     </li>     
-                    <li className="col-2 list-group-item">
+                    <li className="col-12 menusItem">
                         <Link to='/pdflinks'> {'Latest Article by Govt.'}  </Link>
-                    </li>  
-                    <li className="col-1 list-group-item">
-                    <b>{'Total Cases : '}</b>
-                    <b style={{color:'Orange'}}>{this.props.countriesData.Total.TotalCases}</b>  
+                    </li> 
+                </ul>
+            <li onClick={this.openNav}>☰ Menus</li>
+            <li className="col-lg-2 col-sm-12">
+            <b>{'Total Cases : '}</b>
+            <b style={{color:'Orange'}}>{this.props.countriesData.Total.TotalCases}</b>  
+            <p><b>{this.props.countriesData.Total.Name}</b></p>
+            </li>  
+            <li className="col-lg-2 col-sm-12">
+                <b>{'Total Cured : '}</b>
+                 <b style={{color:'Green'}}>{this.props.countriesData.Total.TotalCured}</b>  
                     <p><b>{this.props.countriesData.Total.Name}</b></p>
-                    </li>  
-                    
-                    <li className="col-1 list-group-item">
-                        <b>{'Total Cured : '}</b>
-                         <b style={{color:'Green'}}>{this.props.countriesData.Total.TotalCured}</b>  
-                            <p><b>{this.props.countriesData.Total.Name}</b></p>
-                    </li>  
-                    
-                    <li className="list-group-item">
-                    <b>{'Total Deaths : '}</b> 
-                    <b style={{color:'Red'}}>{this.props.countriesData.Total.TotalDeath}</b>  
-                    <p><b>{this.props.countriesData.Total.Name}</b></p>
-                    </li>  
-                        </ul>
-                </div>
+            </li>  
+            <li className="col-lg-2 sol-sm-12">
+            <b>{'Total Deaths : '}</b> 
+            <b style={{color:'Red'}}>{this.props.countriesData.Total.TotalDeath}</b>  
+            <p><b>{this.props.countriesData.Total.Name}</b></p>
+            </li>  
+        </ul>
+         } else {
+             menuBar =  <ul className='col-12 shadow justify-content-center'>
+             <li className="col-2 menusItem">
+                 <Link to='/graph'> {'Overview'}  </Link>
+             </li>
+             <li className="col-1 menusItem">
+                 <Link to='/world'> {'World'}  </Link>
+             </li>
+                         
+             <li className="col-1 menusItem">
+                 <Link to='/India'>
+                         {'India'}
+                 </Link>
+             </li>     
+             <li className="col-2 menusItem">
+                 <Link to='/pdflinks'> {'Latest Article by Govt.'}  </Link>
+             </li>  
+             <li className="col-lg-2 col-sm-12">
+             <b>{'Total Cases : '}</b>
+             <b style={{color:'Orange'}}>{this.props.countriesData.Total.TotalCases}</b>  
+             <p><b>{this.props.countriesData.Total.Name}</b></p>
+             </li>  
+             
+             <li className="col-lg-2 col-sm-12">
+                 <b>{'Total Cured : '}</b>
+                  <b style={{color:'Green'}}>{this.props.countriesData.Total.TotalCured}</b>  
+                     <p><b>{this.props.countriesData.Total.Name}</b></p>
+             </li>  
+             
+             <li className="col-lg-2 sol-sm-12">
+             <b>{'Total Deaths : '}</b> 
+             <b style={{color:'Red'}}>{this.props.countriesData.Total.TotalDeath}</b>  
+             <p><b>{this.props.countriesData.Total.Name}</b></p>
+             </li>  
+                 </ul>
+         }
+        return (
+            <div className='row detailedStyle '>
+               {menuBar}
                 <div className='col-12 detailsBlock shadow p-3 mb-5 bg-white rounded'>
                     <TableContent />
                 </div>

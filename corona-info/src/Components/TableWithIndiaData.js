@@ -99,6 +99,7 @@ const customStyles = {
                  <DataTable
                  data={this.props.countriesData.IndiaStateData}
                     columns={Statecolumns}
+                    responsive='true'
                     title={'Indian State Details'}
                     pagination
                     paginationPerPage="7"

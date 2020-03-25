@@ -155,6 +155,7 @@ class TableWithWorldData extends Component {
                     columns={Countriescolumns}
                     data={this.props.countriesData.data}
                     title={'World Details'}
+                    responsive='true'
                     pagination
                     paginationPerPage="7"
                     customStyles={customStyles}

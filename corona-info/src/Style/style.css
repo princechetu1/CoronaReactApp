@@ -1,10 +1,14 @@
 body {
-  background-image: url('../Helpers/applicationBackground2.jpg');
+  background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     font-family: 'Roboto' !important;
     font-size: 16px !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: scroll;
 }
 
 body, html {
@@ -14,7 +18,7 @@ body, html {
 
 .headerStyle{
     background-color: rgba(210, 242, 250, 0.356);
-    padding: 1rem;
+    padding: 2rem;
     border-bottom: solid 1px;
 }
 
@@ -45,8 +49,10 @@ body, html {
   
 }
 
-.footerStyle h3{
+.footerStyle h5{
     text-align: center;
+    color:black;
+    position: absolute;
 }
 
 
@@ -56,14 +62,12 @@ ul {
     margin: 0;
     padding: 0;  
     padding-top: 2px;
-    height: 52px;
     overflow: hidden;
-    background-color: #333;
+    background-color: #f3f3f3;
   }
   
   li {
     float: left;
-    height: 3rem;
     border-right:1px solid #bbb;
   }
     
@@ -80,12 +84,8 @@ ul {
     background-color: #4CAF50;
   }
 
-  .list-group-item {
+  .menusItem {
     padding: 0px !important;
-    margin-right: 0px;
-    margin-left: 4px;
-    width: 190px;
-    padding-left: 18px !important;
   }
 
   .list-group-item span {
@@ -99,4 +99,55 @@ ul {
     overflow: scroll;
     height: 25rem;
     overflow-x: hidden;
+  }
+
+  .sidenav {
+   display: block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;   
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+    .menusItem {
+      content: none;
+      visibility: hidden;
+    }
+    .footerStyle {
+      visibility: hidden;
+    }
   }
