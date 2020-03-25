@@ -14,42 +14,13 @@ class DetailedComponent extends Component {
       this.state ={
           isMobiledevice:(window.outerWidth < 450) ? true :false
       };
-      this.mySidenav = React.createRef();
-      this.openNav = this.openNav.bind(this);
-      this.closeNav = this.closeNav.bind(this);
+      
   }
 
-
-  closeNav(){
-    debugger;
-  }
-
-  openNav(){
-    debugger;
-  }
      render() {
          let menuBar;
          if(this.state.isMobiledevice){
-            menuBar = <ul className='col-12 shadow justify-content-center'>
-                <ul className="sidenav" style={{visibility:'visible',display:'block'}} >
-                    <li onClick={this.closeNav}>X</li>
-                    <li className="col-12 menusItem">
-                        <Link to='/graph'> {'Overview'}  </Link>
-                    </li>
-                    <li className="col-12 menusItem">
-                        <Link to='/world'> {'World'}  </Link>
-                    </li>
-                                
-                    <li className="col-12 menusItem">
-                        <Link to='/India'>
-                                {'India'}
-                        </Link>
-                    </li>     
-                    <li className="col-12 menusItem">
-                        <Link to='/pdflinks'> {'Latest Article by Govt.'}  </Link>
-                    </li> 
-                </ul>
-            <li onClick={this.openNav}>☰ Menus</li>
+            menuBar = <ul className='col-12 shadow justify-content-center'>     
             <li className="col-lg-2 col-sm-12">
             <b>{'Total Cases : '}</b>
             <b style={{color:'Orange'}}>{this.props.countriesData.Total.TotalCases}</b>  
