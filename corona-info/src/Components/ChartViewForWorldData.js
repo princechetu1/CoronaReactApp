@@ -5,7 +5,6 @@ import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 import mapJson from "@highcharts/map-collection/custom/world.geo.json";
 import highchartsMap from "highcharts/modules/map";
-import proj4 from "proj4";
 highchartsMap(Highcharts);
 
 const mapOptions = {

@@ -38,7 +38,6 @@ const Statecolumns = [
       fontStyle:'Bold',
       color:'DarkYellow',
       fontSize:24
-
     }
   },
   {
@@ -50,7 +49,6 @@ const Statecolumns = [
       fontStyle:'Bold',
       color:'green',
       fontSize:24
-
     }
   },
   {
@@ -62,7 +60,6 @@ const Statecolumns = [
       fontStyle:'Bold',
       color:'red',
       fontSize:24
-
     },
   },
 ];

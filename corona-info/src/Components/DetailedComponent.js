@@ -12,7 +12,7 @@ class DetailedComponent extends Component {
   constructor(props){
       super(props);
       this.state ={
-          isMobiledevice:(window.outerWidth < 450) ? true :false
+          isMobiledevice:(window.outerWidth < 600) ? true :false
       };
       
   }

@@ -51,7 +51,6 @@ const Countriescolumns = [
           fontStyle:'Bold',
           color:'Red',
           fontSize:24
-    
         },
       
       },
@@ -64,7 +63,6 @@ const Countriescolumns = [
           fontStyle:'Bold',
           color:'Red',
           fontSize:24
-    
         },
       
       },
@@ -92,7 +90,7 @@ const Countriescolumns = [
           fontSize:24
     
         },
-      
+      hide:'sm'
       },
       {
         name: 'Critical',
@@ -103,9 +101,7 @@ const Countriescolumns = [
           fontStyle:'Bold',
           color:'red',
           fontSize:24
-    
         },
-      
       },
       {
         name: 'CasesPerOneMillion',
@@ -116,9 +112,8 @@ const Countriescolumns = [
           fontStyle:'Bold',
           color:'red',
           fontSize:24
-    
         },
-      
+      hide:'sm'
       }
 
   ];
