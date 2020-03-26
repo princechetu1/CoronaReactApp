@@ -148,6 +148,24 @@ ul {
 
 
   @media screen and (max-width: 450px) {
+
+    body, html{
+      overflow-x: hidden;
+    }
+    .mlist {
+      border: hidden !important;
+      width: 100%;
+    }
+    .headerStyle h5{
+      font-size: 16px !important;
+    }
+    .headerStyle h2{
+      font-size: 22px !important;
+    }
+    .row .mlist {
+      margin-left: -5px !important;
+      margin-right: -5px !important;
+    }
     .menusItem {
       content: none;
       visibility: hidden;
@@ -155,10 +173,17 @@ ul {
     .menuIcon{
       visibility: visible !important;
     }
-    .footerStyle {
-      visibility: hidden;
+    .footerStyle h5 {
+     position: relative;
+     top: 6rem;
     }
     .sidenav{
       visibility: visible;
+    }
+
+    .detailsBlock{
+      overflow: scroll;
+      height: 30rem;
+      overflow-x: hidden;
     }
   }

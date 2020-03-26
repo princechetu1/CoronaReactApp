@@ -34,11 +34,11 @@ export default (state=initalState,action) => {
             newState.IndianData = action.value;
             return newState;
         case 'INDIA_STATE_DATA_COMPLETED':
-            var lastObj = action.value[action.value.length -1];
+            var lastObj = action.value.find(x => x.State_Name === "Total number of confirmed cases in India");
             var obj = {
-                TotalCases :parseInt(lastObj.Total_Confirmed_cases_Indian_National) + parseInt(lastObj.Total_Confirmed_cases_Foreign_National),
                 TotalCured :lastObj.Cured_Discharged_Migrated,
                 TotalDeath :lastObj.Death,
+                TotalCases :parseInt(lastObj.Total_Confirmed_cases_Indian_National) + parseInt(lastObj.Total_Confirmed_cases_Foreign_National),
                 Name:"( India )"
             };
             newState.Total = obj;

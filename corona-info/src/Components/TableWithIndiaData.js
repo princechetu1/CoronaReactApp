@@ -90,6 +90,7 @@ const customStyles = {
   };
 
  class TableWithIndiaData extends Component {
+
   componentWillMount(){
     this.props.getInidaDataAsync();
 }

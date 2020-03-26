@@ -13,7 +13,7 @@ class PDFDetailView extends Component {
         return (
             <div style={{backgroundColor:'white'}}>
                {this.props.PDFLinks.data.map((k) =>{
-                  return <div><a target='_blank' href={k.link}>{k.title}</a><br/></div>
+                  return <div><a rel="noopener noreferrer" target='_blank' href={k.link}>{k.title}</a><br/></div>
                })}
             </div>
         )

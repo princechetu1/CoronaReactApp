@@ -21,20 +21,22 @@ class DetailedComponent extends Component {
          let menuBar;
          if(this.state.isMobiledevice){
             menuBar = <ul className='col-12 shadow justify-content-center'>     
-            <li className="col-lg-2 col-sm-12">
-            <b>{'Total Cases : '}</b>
-            <b style={{color:'Orange'}}>{this.props.countriesData.Total.TotalCases}</b>  
-            <p><b>{this.props.countriesData.Total.Name}</b></p>
-            </li>  
-            <li className="col-lg-2 col-sm-12">
-                <b>{'Total Cured : '}</b>
-                 <b style={{color:'Green'}}>{this.props.countriesData.Total.TotalCured}</b>  
-                    <p><b>{this.props.countriesData.Total.Name}</b></p>
-            </li>  
-            <li className="col-lg-2 sol-sm-12">
-            <b>{'Total Deaths : '}</b> 
-            <b style={{color:'Red'}}>{this.props.countriesData.Total.TotalDeath}</b>  
-            <p><b>{this.props.countriesData.Total.Name}</b></p>
+            <li className="row mlist">
+                <div className="col-4">
+            <b>{'Total Cases '}</b><br/>
+            <b>{this.props.countriesData.Total.Name}</b><br/>
+            <b style={{color:'Orange'}}>{this.props.countriesData.Total.TotalCases}</b><br/>
+            </div>
+            <div className="col-4">
+            <b>{'Total Cured '}</b><br/>
+            <b>{this.props.countriesData.Total.Name}</b><br/>
+            <b style={{color:'Green'}}>{this.props.countriesData.Total.TotalCured}</b><br/>
+            </div>  
+            <div className="col-4">
+            <b>{'Total Deaths '}</b> <br/>
+            <b>{this.props.countriesData.Total.Name}</b><br/>
+            <b style={{color:'Red'}}>{this.props.countriesData.Total.TotalDeath}</b><br/>
+            </div>  
             </li>  
         </ul>
          } else {
