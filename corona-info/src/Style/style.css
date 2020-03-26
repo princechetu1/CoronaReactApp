@@ -52,6 +52,8 @@ body, html {
 .footerStyle h5{
     text-align: center;
     color:black;
+    position: relative;
+    top:9rem;
 }
 
 
@@ -96,7 +98,7 @@ ul {
 
   .detailsBlock{
     overflow: scroll;
-    height: 25rem;
+    height: 35rem;
     overflow-x: hidden;
   }
 

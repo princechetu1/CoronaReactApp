@@ -152,7 +152,7 @@ class TableWithWorldData extends Component {
                     title={'World Details'}
                     responsive='true'
                     pagination
-                    paginationPerPage="7"
+                    paginationPerPage="10"
                     customStyles={customStyles}
                 />
             </div>

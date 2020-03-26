@@ -100,7 +100,7 @@ const customStyles = {
                     responsive='true'
                     title={'Indian State Details'}
                     pagination
-                    paginationPerPage="7"
+                    paginationPerPage="10"
                     customStyles={customStyles}
                 />
             </div>
