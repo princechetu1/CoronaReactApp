@@ -41,9 +41,8 @@ function*  getInidaDataAsync() {
             } 
         })
         var obj = {
-            'State_Name':perStateData[0],
-            'Total_Confirmed_cases_Indian_National':perStateData[1],
-            'Total_Confirmed_cases_Foreign_National':perStateData[2],
+            'State_Name':perStateData[1],
+            'Total_Confirmed_cases_Indian_National':perStateData[2],
             'Cured_Discharged_Migrated':perStateData[3],
             'Death':perStateData[4]
         }

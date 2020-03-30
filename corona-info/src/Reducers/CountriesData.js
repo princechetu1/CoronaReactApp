@@ -34,11 +34,20 @@ export default (state=initalState,action) => {
             newState.IndianData = action.value;
             return newState;
         case 'INDIA_STATE_DATA_COMPLETED':
-            var lastObj = action.value.find(x => x.State_Name === "Total number of confirmed cases in India");
+            var totalCases =0, totalDeath = 0,totalCured =0;
+                action.value.forEach(element => {
+                    if((element.Total_Confirmed_cases_Indian_National != undefined && element.Death != undefined && 
+                        element.Cured_Discharged_Migrated != undefined ) || (element.Total_Confirmed_cases_Indian_National != null && element.Death != null && 
+                        element.Cured_Discharged_Migrated != null)){
+                        totalCases+=parseInt(element.Total_Confirmed_cases_Indian_National);
+                        totalDeath+=parseInt(element.Death);
+                        totalCured+=parseInt(element.Cured_Discharged_Migrated);
+                    }
+                 });
             var obj = {
-                TotalCured :lastObj.Cured_Discharged_Migrated,
-                TotalDeath :lastObj.Death,
-                TotalCases :parseInt(lastObj.Total_Confirmed_cases_Indian_National) + parseInt(lastObj.Total_Confirmed_cases_Foreign_National),
+                TotalCured :totalCured,
+                TotalDeath :totalDeath,
+                TotalCases :totalCases,
                 Name:"( India )"
             };
             newState.Total = obj;

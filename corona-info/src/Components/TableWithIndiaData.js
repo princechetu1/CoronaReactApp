@@ -30,17 +30,6 @@ const Statecolumns = [
     }
   },
   {
-    name: 'Total Confirmed cases(Foreign National)',
-    selector: 'Total_Confirmed_cases_Foreign_National',
-    sortable: true,
-    center: true,
-    style: {
-      fontStyle:'Bold',
-      color:'DarkYellow',
-      fontSize:24
-    }
-  },
-  {
     name: 'Cured/Discharged/Migrated',
     selector: 'Cured_Discharged_Migrated',
     sortable: true,
@@ -61,7 +50,7 @@ const Statecolumns = [
       color:'red',
       fontSize:24
     },
-  },
+  }
 ];
 
 
